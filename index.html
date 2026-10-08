@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whisk & Wink Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Whisk & Wink Cafe Logo" class="logo">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#cafe">Our Cafe</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#drink">Find Your Drink</a>
+        <a href="#offers">Special Offers</a>
+        <a href="#booking">Book a Table</a>
+        <a href="#order">Order Online</a>
+        <a href="#payment">Payment</a>
+        <a href="#tracking">Track Order</a>
+        <a href="#ratings">Ratings</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+<section class="home" id="home">
+
+    <h1>Welcome to Whisk & Wink Cafe</h1>
+
+    <p>Fresh Coffee. Fresh Food. Fresh Moments.</p>
+
+    <p>
+        A cozy place to enjoy delicious food, refreshing drinks,
+        and beautiful moments with friends and family.
+    </p>
+
+    <a href="#menu" class="button">Explore Our Menu</a>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2>About Whisk & Wink</h2>
+
+    <p>
+        Whisk & Wink Cafe is a cozy and welcoming cafe created
+        for people who love good food, fresh coffee, and relaxing moments.
+    </p>
+
+    <p>
+        We believe that every cup of coffee and every meal should
+        be prepared with care. Our cafe offers a comfortable atmosphere
+        where customers can sit back, relax, and enjoy their favorite food.
+    </p>
+
+    <p>
+        Whether you are meeting friends, spending time with family,
+        studying, or simply enjoying some quiet time, Whisk & Wink Cafe
+        is a perfect place for you.
+    </p>
+
+</section>
+
+<section class="cafe" id="cafe">
+
+    <h2>Our Cafe</h2>
+
+    <p>Take a look at our cafe and enjoy the atmosphere.</p>
+
+    <div class="gallery-container">
+
+        <img src="images/cafe.jpg" alt="Our Cafe">
+
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Dessert">
+
+         <img src="images/sandwich.jpg" alt="Our Cafe">
+
+        <img src="images/sweet.jpg" alt="Our Cafe">
+
+        <img src="images/cafe3.jpg" alt="Our Cafe">
+
+    </div>
+
+</section>
+
+
+<!-- OUR MENU -->
+<section class="menu" id="menu">
+
+    <h2>Our Menu</h2>
+
+    <div class="menu-container">
+
+        <!-- COFFEE -->
+        <div class="menu-card">
+
+            <h3>☕ Coffee</h3>
+
+            <p>Freshly brewed and delicious coffee.</p>
+
+            <strong>₹100</strong>
+
+            <p class="feedback">
+                ⭐⭐⭐⭐⭐
+                <br>
+                "Amazing coffee and great taste!"
+            </p>
+
+        </div>
+
+
+        <!-- SANDWICH -->
+        <div class="menu-card">
+
+            <h3>🥪 Sandwich</h3>
+
+            <p>Fresh and tasty sandwich prepared with care.</p>
+
+            <strong>₹120</strong>
+
+            <p class="feedback">
+                ⭐⭐⭐⭐⭐
+                <br>
+                "Very tasty and filling!"
+            </p>
+
+        </div>
+
+
+        <!-- DESSERT -->
+        <div class="menu-card">
+
+            <h3>🍰 Desserts</h3>
+
+            <p>Sweet and delicious desserts for every mood.</p>
+
+            <strong>₹150</strong>
+
+            <p class="feedback">
+                ⭐⭐⭐⭐⭐
+                <br>
+                "The dessert was delicious!"
+            </p>
+
+        </div>
+
+
+        <!-- COLD DRINK -->
+        <div class="menu-card">
+
+            <h3>🥤 Cold Drinks</h3>
+
+            <p>Refreshing cold drinks, juices and shakes.</p>
+
+            <strong>₹140</strong>
+
+            <p class="feedback">
+                ⭐⭐⭐⭐☆
+                <br>
+                "Very refreshing and tasty!"
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FIND YOUR PERFECT DRINK -->
+<section id="drink-quiz">
+
+    <h2>Find Your Perfect Drink ☕</h2>
+
+    <p>Answer these questions and find a drink you will love!</p>
+
+    <h3>1. Do you prefer a hot or cold drink?</h3>
+
+    <button onclick="chooseAnswer('temperature', 'hot', this)">
+        🔥 Hot
+    </button>
+
+    <button onclick="chooseAnswer('temperature', 'cold', this)">
+        🧊 Cold
+    </button>
+
+    <h3>2. How sweet do you like your drink?</h3>
+
+    <button onclick="chooseAnswer('sweetness', 'sweet', this)">
+        🍬 Sweet
+    </button>
+
+    <button onclick="chooseAnswer('sweetness', 'less', this)">
+        😊 Less Sweet
+    </button>
+
+    <h3>3. Which flavour do you prefer?</h3>
+
+    <button onclick="chooseAnswer('flavour', 'coffee', this)">
+        ☕ Coffee
+    </button>
+
+    <button onclick="chooseAnswer('flavour', 'chocolate', this)">
+        🍫 Chocolate
+    </button>
+
+    <br><br>
+
+    <button onclick="findMyDrink()">
+        Find My Perfect Drink
+    </button>
+
+    <div id="drinkResult"></div>
+
+</section>
+
+
+<!-- SPECIAL OFFERS -->
+<section class="offers" id="offers">
+
+    <h2>Special Offers 🎁</h2>
+
+    <div class="offer-container">
+
+        <div class="offer-card">
+
+            <h3>☕ Coffee & Cake Combo</h3>
+
+            <p>
+                Enjoy a delicious coffee with a slice of cake.
+            </p>
+
+            <strong>₹199</strong>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <h3>🥪 Lunch Combo</h3>
+
+            <p>
+                Sandwich and cold drink at a special price.
+            </p>
+
+            <strong>₹249</strong>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <h3>🍰 Dessert Special</h3>
+
+            <p>
+                Enjoy a sweet dessert with your favorite drink.
+            </p>
+
+            <strong>₹229</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOK A TABLE -->
+<section class="booking" id="booking">
+
+    <h2>Book a Table</h2>
+
+    <p>Reserve your table at Whisk & Wink Cafe.</p>
+
+    <input
+        type="text"
+        id="customerName"
+        placeholder="Your Name"
+    >
+
+    <input
+        type="date"
+        id="bookingDate"
+    >
+
+    <input
+        type="time"
+        id="bookingTime"
+    >
+
+    <input
+        type="number"
+        id="guests"
+        placeholder="Number of Guests"
+    >
+
+    <button onclick="bookTable()">
+        Book Table
+    </button>
+
+    <div id="bookingResult"></div>
+
+</section>
+
+
+<!-- ORDER ONLINE -->
+<section class="order" id="order">
+
+    <h2>Order Online</h2>
+
+    <p>Choose your favorite food and add it to your order.</p>
+
+    <div class="order-container">
+
+
+        <div class="order-card">
+
+            <h3>☕ Coffee</h3>
+
+            <p>Freshly brewed coffee.</p>
+
+            <strong>₹100</strong>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="addToOrder('Coffee', 100)">
+                Add to Order
+            </button>
+
+        </div>
+
+
+        <div class="order-card">
+
+            <h3>🥪 Sandwich</h3>
+
+            <p>Fresh and delicious sandwich.</p>
+
+            <strong>₹120</strong>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="addToOrder('Sandwich', 120)">
+                Add to Order
+            </button>
+
+        </div>
+
+
+        <div class="order-card">
+
+            <h3>🍰 Dessert</h3>
+
+            <p>Delicious sweet dessert.</p>
+
+            <strong>₹150</strong>
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <button onclick="addToOrder('Dessert', 150)">
+                Add to Order
+            </button>
+
+        </div>
+
+
+        <div class="order-card">
+
+            <h3>🥤 Cold Drink</h3>
+
+            <p>Refreshing cold drink.</p>
+
+            <strong>₹140</strong>
+
+            <p>⭐⭐⭐⭐☆</p>
+
+            <button onclick="addToOrder('Cold Drink', 140)">
+                Add to Order
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- YOUR ORDER -->
+<section class="order-summary" id="order-summary">
+
+    <h2>Your Order</h2>
+
+    <div id="order-list">
+        <p>No items added yet.</p>
+    </div>
+
+    <h3>
+        Total: ₹<span id="order-total">0</span>
+    </h3>
+
+    <button onclick="goToPayment()">
+        Proceed to Payment
+    </button>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment" id="payment">
+
+    <h2>Choose Payment Method</h2>
+
+    <p>Select how you would like to pay.</p>
+
+    <div class="payment-container">
+
+
+        <div class="payment-card">
+
+            <h3>📱 UPI Payment</h3>
+
+            <p>Pay using your UPI app.</p>
+
+            <button onclick="payWithUPI()">
+                Pay with UPI
+            </button>
+
+        </div>
+
+
+        <div class="payment-card">
+
+            <h3>💵 Cash</h3>
+
+            <p>Pay when you receive your order.</p>
+
+            <button onclick="payWithCash()">
+                Pay with Cash
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRACK ORDER -->
+<section class="tracking" id="tracking">
+
+    <h2>Track Your Order</h2>
+
+    <p>Click the button to see your order status.</p>
+
+    <button onclick="trackOrder()">
+        Track My Order
+    </button>
+
+    <div id="trackingResult"></div>
+
+</section>
+
+
+<!-- OVERALL RATINGS -->
+<section class="ratings" id="ratings">
+
+    <h2>Overall Customer Ratings</h2>
+
+    <div class="rating-box">
+
+        <h3>⭐⭐⭐⭐⭐</h3>
+
+        <p>4.9 out of 5</p>
+
+        <p>
+            "coffee was fresh hot and delicious!"
+        </p>
+
+        <p>— Our Customers</p>
+
+        <h3>⭐⭐⭐⭐⭐</h3>
+
+        <p>4.8 out of 5</p>
+
+        <p>
+            "A perfect place to relax,enjoy tasty food,and spend time with friends"
+        </p>
+
+        <p>— Our Customers</p>
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+        <p>4.7 out of 5</p>
+
+        <p>
+            "loved the food everything tasted fresh and flavorfull"
+        </p>
+
+        <p>— Our Customers</p>
+
+
+        </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>We would love to hear from you!</p>
+
+    <div class="contact-info">
+
+        <p>📍 123 Cafe Street, Your City</p>
+
+        <p>📞 +91 98765 43210</p>
+
+        <p>✉️ hello@whiskandwink.com</p>
+
+        <p>🕒 Open daily: 9:00 AM - 10:00 PM</p>
+
+    </div>
+
+
+    <div class="quick-contact">
+
+        <a href="tel:+919876543210">
+            📞 Call Us
+        </a>
+
+        <a href="mailto:hello@whiskandwink.com">
+            ✉️ Email Us
+        </a>
+
+        <a href="https://wa.me/919876543210" target="_blank">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h3>Whisk & Wink Cafe</h3>
+
+    <p>
+        Fresh Coffee. Fresh Food. Fresh Moments.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#">Instagram</a>
+
+        <a href="#">Facebook</a>
+
+        <a href="#">WhatsApp</a>
+
+    </div>
+
+    <p>
+        © 2026 Whisk & Wink Cafe. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
